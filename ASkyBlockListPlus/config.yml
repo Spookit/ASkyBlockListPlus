@@ -1,0 +1,17 @@
+slot-items:
+  SKYBLOCK_CH_TIMES:
+  # Do not change the type
+    type: SKYBLOCK_CHALLANGES_TIMES
+    format: "&e$challanges &c&o$times"
+  SKYBLOCK_CH_STATUS:
+    type: SKYBLOCK_CHALLANGES_STATUS
+    format: "&e$challanges &r$status"
+    finished-text: "&a✔"
+    unfinished-text: "&c✖"
+  SKYBLOCK_TOP_ISLAND:
+    type: SKYBLOCK_TOP_ISLAND
+    format: "&e$player &5$level"
+  SKYBLOCK_MEMBERS:
+    type: SKYBLOCK_TEAM_MEMBERS
+    format: "$player &7$ping"
+    ping: true

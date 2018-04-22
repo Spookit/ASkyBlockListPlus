@@ -1,0 +1,383 @@
+#DONT TOUCH THIS >:(
+config-version: 1.5
+#The items
+# Can be anything
+# Include ListItems
+# Use PlayerListItemOption to customize the item!
+# Built-in options:
+# - ping : set the item ping latency, value: number (example: "@PING=10;NoLaggingPlayer")
+# - permission : set the permission for viewing this slot, if player doesnt have this permission, the slot will invisible. value: permission
+# (example: "@PERM=server.admin;Only admin can see this" or "@PERMISSION=server.vip;Thanks for donating the server"
+# - alternative : set the alternative slot text if the condition is not possible. (like player doesnt have the viewing permission), value: anything
+# (example: "@PERM=server.not.noob;@ALT=You are noob;You are pro" or "@PERM=server.cool;@ALTERNATIVE=You are ugly;You are cool")
+# - gamemode: set the slot entity gamemode to specific gamemode. value: GameMode (CREATIVE,SURVIVAL,ADVENTURE,SPECTATOR)
+# (example: "@GAMEMODE=SPECTATOR;TextGoesHere"
+# - onlyforgamemode: set the slot only visible for players that has specific gamemode. value: array of game mode (GAMEMODE SEPARATED BY COMMA)
+# (example: "@ONLYFORGAMEMODE=SPECTATOR,CREATIVE;TextGoesHere" or "@OFGM=SPECTATOR;TextGoesHere"
+#
+# HOW TO COMBINE OPTIONS
+# @<THIS IS 1ST OPTION>=<THIS IS 1ST OPTION VALUE>;<MORE VALUE>
+# if the first char or char after ";" is "@", it will defined as
+# Option. If not it will set the text next to it as a normal text,
+# not an option
+# 
+# This is wrong
+# usage -> "@PING=1000;this is awesome;@SKIN=Awesomeness"
+# output v 
+#   ping -> 1000 & text -> this is awesome;@SKIN=Awesomeness"
+# 
+# This is correct
+# usage -> "@PING=10;@SKIN=Noobie;NoLaggYay"
+# output v
+#   ping-> 10 & skin -> Noobie & text -> NoLaggYay
+#   
+# 
+# Example usages:
+# @OPTION=VALUE;@ANOTHER_OPTION=ANOTHER_VALUE;TextGoesHere
+# or
+# @OPTION=VALUE;TextGoesHere
+#
+# Theres 20 items per columns.
+#
+# Animating:
+# Use ";" to separate between animation frames
+# Do not use @ on the first char! Use "&r@" instead
+# Example
+# global-tablist:
+# - "FIRST FRAME;SECOND FRAME;THIRD FRAME;ETC..."
+# - "@PING=1000;FIRST FRAME AGAIN;ANOTHER SECOND FRAME;End of Thinking Capacity"
+global-tablist:
+- "&8► &aGlobal Players &8◄"
+- "@PING=1000;<PLAYERS>"
+- "@PING=1000;<PLAYERS>"
+- "@PING=1000;<PLAYERS>"
+- "@PING=1000;<PLAYERS>"
+- "@PING=1000;<PLAYERS>"
+- "@PING=1000;<PLAYERS>"
+- "@PING=1000;<PLAYERS>"
+- "@PING=1000;<PLAYERS>"
+- "@PING=1000;<PLAYERS>"
+- "&8► &aWorld Players &8◄"
+- "@PING=1000;<WORLD_PLAYERS>"
+- "@PING=1000;<WORLD_PLAYERS>"
+- "@PING=1000;<WORLD_PLAYERS>"
+- "@PING=1000;<WORLD_PLAYERS>"
+- "@PING=1000;<WORLD_PLAYERS>"
+- "@PING=1000;<WORLD_PLAYERS>"
+- "@PING=1000;<WORLD_PLAYERS>"
+- "@PING=1000;<WORLD_PLAYERS>"
+- "@PING=1000;<WORLD_PLAYERS>"
+- "&8► &aGlobal Players &8◄"
+- "@PING=1000;<PLAYERS>"
+- "@PING=1000;<PLAYERS>"
+- "@PING=1000;<PLAYERS>"
+- "@PING=1000;<PLAYERS>"
+- "@PING=1000;<PLAYERS>"
+- "@PING=1000;<PLAYERS>"
+- "@PING=1000;<PLAYERS>"
+- "@PING=1000;<PLAYERS>"
+- "@PING=1000;<PLAYERS>"
+- "&8► &aWorld Players &8◄"
+- "@PING=1000;<WORLD_PLAYERS>"
+- "@PING=1000;<WORLD_PLAYERS>"
+- "@PING=1000;<WORLD_PLAYERS>"
+- "@PING=1000;<WORLD_PLAYERS>"
+- "@PING=1000;<WORLD_PLAYERS>"
+- "@PING=1000;<WORLD_PLAYERS>"
+- "@PING=1000;<WORLD_PLAYERS>"
+- "@PING=1000;<WORLD_PLAYERS>"
+- "@PING=1000;<WORLD_PLAYERS>"
+- "&8► &aOnline Staffs &8◄"
+- "@PING=1000;<STAFFS>"
+- "@PING=1000;<STAFFS>"
+- "@PING=1000;<STAFFS>"
+- "@PING=1000;<STAFFS>"
+- "@PING=1000;<STAFFS>"
+- "@PING=1000;<STAFFS>"
+- "@PING=1000;<STAFFS>"
+- "@PING=1000;<STAFFS>"
+- "@PING=1000;<STAFFS>"
+- "@PING=1000;<STAFFS>"
+- "@PING=1000;<STAFFS>"
+- "@PING=1000;<STAFFS>"
+- "@PING=1000;<STAFFS>"
+- "@PING=1000;<STAFFS>"
+- "@PING=1000;<STAFFS>"
+- "@PING=1000;<STAFFS>"
+- "@PING=1000;<STAFFS>"
+- "@PING=1000;<STAFFS>"
+- "@PING=1000;<STAFFS>"
+- "&8► &aServer Info &8◄"
+- ""
+- "@PING=500;@PERMISSION=playerlistplus.admin;@ALTERNATIVE=&eUnknown Server;&eTPS: &7$tps"
+- "@PING=500;&eOnline: &7$online/$max"
+- ""
+- "@PING=1000;&eVersion: &7$ver"
+- "@PING=1000;&ePing: &7$ping"
+- "@PING=1000;&eWorld: &7$world;&eGroup: &7$group"
+- "@PING=1000;&eName: &7$player;&ePrefix: &7$prefix"
+- "@PING=1000;&eMoney: &7$money;&eSuffix: &7$suffix"
+- ""
+- "&8► &aWorlds &8◄"
+- "@PING=1000;<WORLD_GROUPS>"
+- "@PING=1000;<WORLD_GROUPS>"
+- "@PING=1000;<WORLD_GROUPS>"
+- "@PING=1000;<WORLD_GROUPS>"
+- "@PING=1000;<WORLD_GROUPS>"
+- "@PING=1000;<WORLD_GROUPS>"
+- "@PING=1000;<WORLD_GROUPS>"
+- "@PING=1000;<WORLD_GROUPS>"
+per-world-tablist:
+  ASkyBlock:
+    tablist:
+    - "@HASISLAND;@ALTERNATIVE=&8► &aOnline Players &8◄;&8► &aOnline Members &8◄"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_MEMBERS>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_MEMBERS>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_MEMBERS>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_MEMBERS>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_MEMBERS>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_MEMBERS>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_MEMBERS>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_MEMBERS>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_MEMBERS>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;&8► &aOnline Players &8◄"#
+    - "@PING=1000;<PLAYERS>"
+    - "@PING=1000;<PLAYERS>"
+    - "@PING=1000;<PLAYERS>"
+    - "@PING=1000;<PLAYERS>"
+    - "@PING=1000;<PLAYERS>"
+    - "@PING=1000;<PLAYERS>"
+    - "@PING=1000;<PLAYERS>"
+    - "@PING=1000;<PLAYERS>"
+    - "@PING=1000;<PLAYERS>"
+    - "@HASISLAND;@ALTERNATIVE=<PLAYERS>;&8► &aChallanges Status &8◄;&8► &aChallanges Times &8◄"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_CH_STATUS>;<SKYBLOCK_CH_TIMES>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_CH_STATUS>;<SKYBLOCK_CH_TIMES>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_CH_STATUS>;<SKYBLOCK_CH_TIMES>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_CH_STATUS>;<SKYBLOCK_CH_TIMES>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_CH_STATUS>;<SKYBLOCK_CH_TIMES>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_CH_STATUS>;<SKYBLOCK_CH_TIMES>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_CH_STATUS>;<SKYBLOCK_CH_TIMES>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_CH_STATUS>;<SKYBLOCK_CH_TIMES>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_CH_STATUS>;<SKYBLOCK_CH_TIMES>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_CH_STATUS>;<SKYBLOCK_CH_TIMES>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_CH_STATUS>;<SKYBLOCK_CH_TIMES>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_CH_STATUS>;<SKYBLOCK_CH_TIMES>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_CH_STATUS>;<SKYBLOCK_CH_TIMES>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_CH_STATUS>;<SKYBLOCK_CH_TIMES>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_CH_STATUS>;<SKYBLOCK_CH_TIMES>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_CH_STATUS>;<SKYBLOCK_CH_TIMES>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_CH_STATUS>;<SKYBLOCK_CH_TIMES>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_CH_STATUS>;<SKYBLOCK_CH_TIMES>"
+    - "@PING=1000;@HASISLAND;@ALTERNATIVE=<PLAYERS>;<SKYBLOCK_CH_STATUS>;<SKYBLOCK_CH_TIMES>"
+    - "&8► &aTop Islands &8◄"
+    - "@PING=1000;<SKYBLOCK_TOP_ISLAND>"
+    - "@PING=1000;<SKYBLOCK_TOP_ISLAND>"
+    - "@PING=1000;<SKYBLOCK_TOP_ISLAND>"
+    - "@PING=1000;<SKYBLOCK_TOP_ISLAND>"
+    - "@PING=1000;<SKYBLOCK_TOP_ISLAND>"
+    - "@PING=1000;<SKYBLOCK_TOP_ISLAND>"
+    - "@PING=1000;<SKYBLOCK_TOP_ISLAND>"
+    - "@PING=1000;<SKYBLOCK_TOP_ISLAND>"
+    - "@PING=1000;<SKYBLOCK_TOP_ISLAND>"
+    - "@PING=1000;<SKYBLOCK_TOP_ISLAND>"
+    - "@PING=1000;<SKYBLOCK_TOP_ISLAND>"
+    - "@PING=1000;<SKYBLOCK_TOP_ISLAND>"
+    - "@PING=1000;<SKYBLOCK_TOP_ISLAND>"
+    - "@PING=1000;<SKYBLOCK_TOP_ISLAND>"
+    - "@PING=1000;<SKYBLOCK_TOP_ISLAND>"
+    - "@PING=1000;<SKYBLOCK_TOP_ISLAND>"
+    - "@PING=1000;<SKYBLOCK_TOP_ISLAND>"
+    - "@PING=1000;<SKYBLOCK_TOP_ISLAND>"
+    - "@PING=1000;<SKYBLOCK_TOP_ISLAND>"
+    - "@HASISLAND;@ALTERNATIVE=&8► &aServer Status &8◄;&8► &aIsland Status &8◄"
+    - ""
+    - "@HASISLAND;@ALTERNATIVE=&eTPS: &7$tps;&eLevel: &7$island_level"
+    - "@HASISLAND;@ALTERNATIVE=&eOnline: &7$online/$max;&eOnline Members: &7$island_online_members/$island_total_members"
+    - ""
+    - "&eName: &7$player"
+    - "&eRank: &7$group"
+    - "&eMoney: &7$money"
+    - ""
+    - ""
+    - "&8► &aWorlds &8◄"
+    - "<WORLD_GROUPS>"
+    - "<WORLD_GROUPS>"
+    - "<WORLD_GROUPS>"
+    - "<WORLD_GROUPS>"
+    - "<WORLD_GROUPS>"
+    - "<WORLD_GROUPS>"
+    - "<WORLD_GROUPS>"
+    - "<WORLD_GROUPS>"
+    - "<WORLD_GROUPS>"
+# [ EXAMPLES ]
+#slotitems:
+#   <any name>:
+#     format: "the format"
+#     type: THE_TYPE
+#     countmore: true (Enable the countmore feature to selected LIST type)
+#
+# Types:
+# 1. PLAYER_LIST
+#   Useable placeholders:
+#   - $player - get the player name
+#   - $ping - get the player ping
+#   - $displayname - get the player displayname (a.k.a nick or realname)
+#   - $listname - get the player default playerlistname
+#   - $group - get the player group permission (requires Vault)
+#   - $prefix - get the player chat prefix (requires Vault)
+#   - $suffix - get the player chat suffix (requires Vault)
+#   Additional Fields:
+#   "hidevanished", Hide all hidden players on tablist. Input: true | false
+#   "permission", Must-have permission to be on the list. Input: Text
+#   "perworld", Shows only player in same world. Input: true | false
+#   "world", Shows all players in this world (requires "perworld" to be true), optional! Default: Player's World. Input: true | false
+#   "groups", Group the world and shows all player inside the world group (requires "perworld" to be true), optional! Default: empty. Input: Group of worlds
+#   "ping", Set the slot ping latency to the player's ping. Optional. Default: true, Input: boolean <true|false>
+#
+# 2. WORLD_LIST
+#  Useable placeholders:
+#  - $name - get the world name
+#  - $wonline - size of player online in this world
+#   Additional Fields:
+#   "world", Specify what world to be visible on the tablist, optional! Default: All worlds. Input: List of Worlds
+#
+# 3. WORLD_GROUP_LIST
+#  Useable placeholders:
+#  - $name - get the world name
+#  - $wonline - size of player online in this world
+#   Additional Fields:
+#   "groups", Specify and group what worlds to be visible on the tablist, optional! Default: empty. Input: List of Worlds
+#
+#  Global Placeholders:
+#   - $player - get the player name
+#   - $ping - get the player ping
+#   - $displayname - get the player displayname (a.k.a nick or realname)
+#   - $listname - get the player default playerlistname
+#   - $group - get the player group permission (requires Vault)
+#   - $prefix - get the player chat prefix (requires Vault)
+#   - $suffix - get the player chat suffix (requires Vault)
+#   - $ver - get the server version
+#   - $tps - get the server tps
+#   - $online - total online players
+#   - $max - max online players
+#   - $world - get the player world name
+#   - And all placeholders from PlaceholderAPI (requires PlaceholderAPI)
+slot-items:
+#   This slot items will shows all players
+    PLAYERS:
+        format: "$displayname &7$ping"
+        type: PLAYER_LIST
+        hidevanished: true
+        ping: true
+#   This slot items will shows only players in game mode CREATIVE
+    EXAMPLEGMPLAYERS1:
+        format: "$displayname &7$ping"
+        type: PLAYER_LIST
+        hidevanished: true
+        ping: true
+        gamemodes:
+        - "CREATIVE"
+#   This slot items will shows only players in game mode SURVIVAL & ADVENTURE
+    EX_GAMEMODE_2:
+        format: "$displayname &7$ping"
+        type: PLAYER_LIST
+        hidevanished: true
+        ping: true
+        gamemodes:
+        - "SURVIVAL"
+        - "ADVENTURE"
+#   This slot items will shows only player that has the permission
+    STAFFS:
+        format: "&a$group &f$player"
+        type: PLAYER_LIST
+        hidevanished: true
+        permission: playerlistplus.staff
+        ping: true
+#   This slot items will shows all "loaded" world listed below, remove world field to put all world
+    WORLDS:
+        format: "$name &7- &b$wonline"
+        type: WORLD_LIST
+        worlds:
+        - world
+        - world_nether
+        - world_the_end
+        - Bedwars
+#   This slot items will shows group name of worlds, the player size is added from each world
+    WORLD_GROUPS:
+        format: "$name &7- &b$wonline"
+        type: WORLD_GROUP_LIST
+        groups:
+            Lobby:
+            - world
+            - world_nether
+            - world_the_end
+            Bedwars:
+            - BedwarsLobby
+            - Bedwars
+            - Bedwars1
+            SkyBlock:
+            - ASkyBlock
+            - ASkyBlock_nether
+#   This slot items will shows player that online in a world
+    WORLD_PLAYERS:
+        format: "$displayname &7$ping"
+        type: PLAYER_LIST
+        hidevanished: true
+        perworld: true
+        #Add another player from another world based on this group category
+        #optional! You can remove this
+        groups:
+          worldgroup1:
+          - world
+          - world_nether
+          - world_the_end
+          worldgroup2:
+          - BedwarsLobby
+          - Bedwars
+          - Bedwars1
+        #world: Bedwars . Add this to specify the world , if not the world will setted to the Player's world
+        ping: true
+header-anim:
+- "&7►►►► &3U&bltimate SkyBlock Server &7◄◄◄◄"
+- "&7►►►► &3Ul&btimate SkyBlock Server &7◄◄◄◄"
+- "&7►►►► &bU&3lt&bimate SkyBlock Server &7◄◄◄◄"
+- "&7►►►► &bUl&3ti&bmate SkyBlock Server &7◄◄◄◄"
+- "&7►►►► &bUlt&3im&bate SkyBlock Server &7◄◄◄◄"
+- "&7►►►► &bUlti&3ma&bte SkyBlock Server &7◄◄◄◄"
+- "&7►►►► &bUltim&3at&be SkyBlock Server &7◄◄◄◄"
+- "&7►►►► &bUltimat&3e &bSkyBlock Server &7◄◄◄◄"
+- "&7►►►► &bUltimate&3 S&bkyBlock Server &7◄◄◄◄"
+- "&7►►►► &bUltimate &3Sk&byBlock Server &7◄◄◄◄"
+- "&7►►►► &bUltimate S&3ky&bBlock Server &7◄◄◄◄"
+- "&7►►►► &bUltimate Sk&3yB&block Server &7◄◄◄◄"
+- "&7►►►► &bUltimate Sky&3Bl&bock Server &7◄◄◄◄"
+- "&7►►►► &bUltimate SkyB&3lo&bck Server &7◄◄◄◄"
+- "&7►►►► &bUltimate SkyBl&3oc&bk Server &7◄◄◄◄"
+- "&7►►►► &bUltimate SkyBlo&3ck&b Server &7◄◄◄◄"
+- "&7►►►► &bUltimate SkyBloc&3k &bServer &7◄◄◄◄"
+- "&7►►►► &bUltimate SkyBlock&3 S&berver &7◄◄◄◄"
+- "&7►►►► &bUltimate SkyBlock &3Se&brver &7◄◄◄◄"
+- "&7►►►► &bUltimate SkyBlock S&3er&bver &7◄◄◄◄"
+- "&7►►►► &bUltimate SkyBlock Se&3rv&ber &7◄◄◄◄"
+- "&7►►►► &bUltimate SkyBlock Ser&3ve&br &7◄◄◄◄"
+- "&7►►►► &bUltimate SkyBlock Serv&3er&b &7◄◄◄◄"
+- "&7►►►► &3U&bltimate SkyBlock Serve&3r &7◄◄◄◄"
+footer-anim:
+- "&dDonate to the server! www.ultimateskyblock.com/shop"
+- "&dDonate to the server! www.ultimateskyblock.com/shop"
+- "&dDonate to the server! www.ultimateskyblock.com/shop"
+- "&dDonate to the server! www.ultimateskyblock.com/shop"
+- "&dDonate to the server! www.ultimateskyblock.com/shop"
+- "&dDonate to the server! www.ultimateskyblock.com/shop"
+- "&5Donate to the server! www.ultimateskyblock.com/shop"
+- "&5Donate to the server! www.ultimateskyblock.com/shop"
+- "&5Donate to the server! www.ultimateskyblock.com/shop"
+- "&5Donate to the server! www.ultimateskyblock.com/shop"
+- "&5Donate to the server! www.ultimateskyblock.com/shop"
+- "&5Donate to the server! www.ultimateskyblock.com/shop"
+#Refresh ticks
+#anim-refresh-ticks: RECOMMENDED 10
+#slot-refresh-ticks: RECOMMENDED 20
+anim-refresh-ticks: 2
+slot-refresh-ticks: 20

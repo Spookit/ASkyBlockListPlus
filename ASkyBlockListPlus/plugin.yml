@@ -1,0 +1,17 @@
+name: ASkyBlockListPlus
+version: 1.0
+main: org.spookit.bukkit.addon.askyblocklistplus.ASkyBlockListPlus
+author: "BlueObsidian"
+description: Provide extra features for PlayerListPlus plugin
+depend:
+- PlayerListPlus
+commands:
+  aslp:
+    description: Main command of ASkyBlockListPlus
+    aliases:
+    - "askyblocklistplus"
+    - "sblp"
+permissions:
+  askyblocklistplus.admin:
+    description: Allows you to use the ASkyBlockListPlus plugin command
+    default: op
